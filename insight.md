@@ -19,23 +19,10 @@ The goal is to simulate the work of a **senior financial analyst or energy consu
 
 ## 🧼 Data Cleaning Process
 
-**Raw File:** DisCos Energy Sales by Service Bands Reports (Excel)
-
-1. **Imported the sheets** containing data on energy distributed, billing, and revenue collection into Power Query.
-2. **Removed metadata** and empty rows, and transposed data where necessary.
-3. **Filtered out sub-categories**, keeping only subtotals for Lifeline and Bands A–E.
-4. **Normalized band names** and merged all DisCo data into a single columnar structure.
-5. **Unpivoted the band columns** to achieve a long format with the following structure:
-
-   * `disco`
-   * `billing_date`
-   * `band` (lifeline, A, B, C, D, E)
-   * `energy_kwh` / `billing_naira` / `collection_naira`
-6. Saved each table (`energy_dist.csv`, `billing.csv`, `collection.csv`) as **SQL-ready CSVs**.
-7. Loaded into PostgreSQL and created a **master view** joining all datasets by `disco`, `band`, and `billing_date`.
+**Raw File:** [DisCos Energy Sales by Service Bands Reports](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/DisCos%20Energy%20Sales%20by%20Service%20Bands%20Reports_Nov.20-Sep.2022_30122022.xlsx) (Excel)
 
 ---
-### 📜 Step 1: Import and Initial Preparation
+### Step 1: Import and Initial Preparation
 
 The raw data was provided in a multi-sheet Excel workbook containing electricity billing records by distribution company (DisCo), time period, and customer band.
 
@@ -45,7 +32,7 @@ The raw data was provided in a multi-sheet Excel workbook containing electricity
 
 ---
 
-### 💃 Step 2: Subtotal Extraction by Band
+### Step 2: Subtotal Extraction by Band
 
 The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, *Band A MD*, etc.). However, the goal was to analyze **total performance per band**, not subcategories.
 
@@ -62,7 +49,7 @@ The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, 
 
 ---
 
-### 📁 Step 3: Standardization and Structure
+### Step 3: Standardization and Structure
 
 Created a consistent table structure for each dataset (`energy`, `billing`, and `collection`), using the format:
 
@@ -72,7 +59,7 @@ Column names were normalized to lowercase and in `snake_case` format for compati
 
 ---
 
-### 🔁 Step 4: Unpivoting into Long Format
+### Step 4: Unpivoting into Long Format
 
 To enable time-series and band-level comparison:
 
@@ -89,7 +76,7 @@ Final structure per file:
 
 ---
 
-### 📦 Step 5: Export for SQL Modeling
+### Step 5: Export for SQL Modeling
 
 Each of the transformed datasets (`energy`, `billing`, and `collection`) was:
 
@@ -116,6 +103,8 @@ This systematic approach to cleaning and reshaping the energy distribution data 
 * `energy_dist` — Energy (kWh) delivered per DisCo and band
 * `billing` — Amount billed in ₦ per DisCo and band
 * `collection` — Amount collected in ₦ per DisCo and band
+
+Loaded into PostgreSQL and created a **master view** joining all datasets by `disco`, `band`, and `billing_date`.
 
 **View Created:** `master_energy_analysis`
 Structure:
