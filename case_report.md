@@ -140,9 +140,3 @@ Power & Data Analytics Consultant
 🔗 [LinkedIn](https://www.linkedin.com/in/durueke-franklin)
 
 ---
-
-## Executive Power Sector Location Advisory Report for AI Robotics Company
-
-## 📌 Project Context
-
-An international AI robotics company is considering establishing a factory in Nigeria. Despite macroeconomic challenges, Nigeria presents a compelling opportunity due to:
