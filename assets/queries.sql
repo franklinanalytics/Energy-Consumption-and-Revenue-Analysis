@@ -114,6 +114,7 @@ FROM master_energy_analysis
 GROUP BY band
 ORDER BY total_billed DESC;
 
+-- Summary Tables ans CTEs
 WITH monthly_summary AS (
   SELECT
     disco,
@@ -126,4 +127,42 @@ WITH monthly_summary AS (
 )
 SELECT * FROM monthly_summary;
 
+
+WITH monthly_summary AS (
+  SELECT
+    disco,
+    TO_CHAR(DATE_TRUNC('month', date), 'YYYY-MM') AS month,
+    SUM(energy_kwh) AS total_energy,
+    SUM(billing_naira) AS total_billed,
+    SUM(collection_naira) AS total_collected
+  FROM master_energy_analysis
+  GROUP BY disco, DATE_TRUNC('month', date)
+)
+SELECT 
+	disco,
+	month,
+	SUM(total_billed),
+	SUM(total_collected)
+FROM monthly_summary
+WHERE 
+	disco = 'AEDC' 
+AND month like '%2022%'
+;
+SELECT * FROM monthly_summary;
+
+
+WITH monthly_summary AS (
+  SELECT
+    disco,
+    TO_CHAR(DATE_TRUNC('month', date), 'YYYY-MM') AS month,
+    SUM(energy_kwh) AS total_energy,
+    SUM(billing_naira) AS total_billed,
+    SUM(collection_naira) AS total_collected
+  FROM master_energy_analysis
+  GROUP BY disco, DATE_TRUNC('month', date)
+)
+SELECT 
+	ROUND(SUM(total_collected),0)
+FROM monthly_summary
+WHERE disco = 'IE';
 
