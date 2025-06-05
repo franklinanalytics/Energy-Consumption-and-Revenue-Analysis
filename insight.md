@@ -1,6 +1,6 @@
 # 🇳🇬 Nigerian Power Sector Analysis (2020–2022)
 
-## 📘 Project Overview
+## Project Overview
 
 This project delivers a comprehensive financial and operational analysis of Nigeria’s power distribution sector using real-world data from 2020 to 2022. It focuses on key metrics such as billing efficiency, revenue collection, band-level performance, and revenue leakage across DisCos (Distribution Companies).
 
@@ -17,7 +17,7 @@ The goal is to simulate the work of a **senior financial analyst or energy consu
 
 ---
 
-## 🧼 Data Cleaning Process
+## Data Cleaning Process
 
 **Raw File:** [DisCos Energy Sales by Service Bands Reports](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/DisCos%20Energy%20Sales%20by%20Service%20Bands%20Reports_Nov.20-Sep.2022_30122022.xlsx) (Excel)
 
@@ -53,7 +53,7 @@ The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, 
 
 Created a consistent table structure for each dataset (`energy`, `billing`, and `collection`), using the format:
 
-\| disco | billing\_date | lifeline | band\_a | band\_b | band\_c | band\_d | band\_e |
+\| disco | date | lifeline | band\_a | band\_b | band\_c | band\_d | band\_e |
 
 Column names were normalized to lowercase and in `snake_case` format for compatibility with SQL and analytics tools.
 
@@ -86,7 +86,7 @@ Each of the transformed datasets (`energy`, `billing`, and `collection`) was:
 
 ---
 
-## ✅ Summary
+## Summary
 
 This systematic approach to cleaning and reshaping the energy distribution data lays the foundation for high-quality analysis. It ensures compatibility with:
 
@@ -96,7 +96,7 @@ This systematic approach to cleaning and reshaping the energy distribution data 
 
 ---
 
-## 🧾 SQL Data Model
+# SQL Data Model
 
 **Database Tables:**
 
@@ -107,10 +107,11 @@ This systematic approach to cleaning and reshaping the energy distribution data 
 Loaded into PostgreSQL and created a **master view** joining all datasets by `disco`, `band`, and `billing_date`.
 
 **View Created:** `master_energy_analysis`
-Structure:
+
+**Structure:**
 
 * `disco`
-* `billing_date`
+* `date`
 * `band`
 * `energy_kwh`
 * `billing_naira`
