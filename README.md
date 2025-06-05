@@ -29,85 +29,14 @@ Built using PostgreSQL and Power BI, the analysis offers insights for stakeholde
 
 ---
 
-## Data Cleaning Process
+## Dataset & Source
 
 **Raw File:** [DisCos Energy Sales by Service Bands Reports](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/DisCos%20Energy%20Sales%20by%20Service%20Bands%20Reports_Nov.20-Sep.2022_30122022.xlsx) (Excel) 
 
 **Source:** Public datasets from [NERC.gov.ng](NERC.gov.ng)
+
+All data was cleaned, normalized, and restructured for modeling purposes. See `/data_cleaning.md` for full documentation.
 > *This is an independent project and not affiliated with NERC. All rights and credit go to the Nigerian Electricity Regulatory Commission for the original data.*
----
-### Step 1: Import and Initial Preparation
-
-The raw data was provided in a multi-sheet Excel workbook containing electricity billing records by distribution company (DisCo), time period, and customer band.
-
-* Loaded the relevant sheets into **Power Query**.
-* Removed all metadata headers, footers, and empty rows to retain only relevant tabular values.
-* Transposed the tables to switch rows and columns into a standard layout for analysis.
-
----
-
-### Step 2: Subtotal Extraction by Band
-
-The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, *Band A MD*, etc.). However, the goal was to analyze **total performance per band**, not subcategories.
-
-* Identified and retained only the **subtotal values** for:
-
-  * Lifeline
-  * Band A
-  * Band B
-  * Band C
-  * Band D
-  * Band E
-* Removed all intermediary columns and unnecessary breakdowns.
-* Reorganized the cleaned values for each DisCo and placed them **vertically** into a unified table.
-
----
-
-### Step 3: Standardization and Structure
-
-Created a consistent table structure for each dataset (`energy`, `billing`, and `collection`), using the format:
-
-\| disco | date | lifeline | band\_a | band\_b | band\_c | band\_d | band\_e |
-
-Column names were normalized to lowercase and in `snake_case` format for compatibility with SQL and analytics tools.
-
----
-
-### Step 4: Unpivoting into Long Format
-
-To enable time-series and band-level comparison:
-
-* Used **Power Query’s Unpivot Columns** feature to convert the six band columns (`lifeline` through `band_e`) into two:
-
-  * `band`
-  * `value_column` (e.g., `energy_kwh`, `billing_naira`, or `collection_naira`)
-* This reshaped the data into a **tidy/long format** — suitable for merging, aggregation, and time-series analysis.
-
-Final structure per file:
-
-| disco | billing\_date | band | energy\_kwh / billing\_naira / collection\_naira |
-| ----- | ------------- | ---- | ------------------------------------------------ |
-
----
-
-### Step 5: Export for SQL Modeling
-
-Each of the transformed datasets (`energy`, `billing`, and `collection`) was:
-
-* Validated for consistency and duplicates
-* Saved as `.csv` format for compatibility with PostgreSQL and Power BI
-* Each file contains **1,518 rows**, ensuring perfect alignment across datasets for relational modeling
-
----
-
-## Summary
-
-This systematic approach to cleaning and reshaping the energy distribution data lays the foundation for high-quality analysis. It ensures compatibility with:
-
-* SQL-based data warehousing
-* Power BI dashboards
-* Industry-grade financial and operational analytics
-
 ---
 
 # SQL Data Model
@@ -133,7 +62,7 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 
 ---
 
-## 📊 Core Analysis & Insights
+## Analysis & Insights
 
 ### 1. Energy Billing Rate by Band
 
@@ -162,7 +91,8 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 **Insight:**
 
 * High losses in Kaduna, Ibadan, and Benin.
-  **Recommendation:** Target metering rollout and enforcement.
+
+**Recommendation:** Target metering rollout and enforcement.
 
 ### 4. Monthly Trends
 
@@ -170,7 +100,8 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 **Insight:**
 
 * Billing up, collection flat post-2021.
-  **Recommendation:** Prepaid incentives and financing for debt reduction.
+
+**Recommendation:** Prepaid incentives and financing for debt reduction.
 
 ### 5. Band Efficiency (Energy vs Paid)
 
@@ -178,54 +109,39 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 **Insight:**
 
 * Bands D–E: < 40% monetized energy
-  **Recommendation:** Improve mobile payments and education.
+
+**Recommendation:** Improve mobile payments and education.
 
 ---
 
-## 🧱 Summary Tables & CTEs
+## Power BI Dashboard Structure
 
-Created reusable **monthly summaries** and **band-level KPIs** using PostgreSQL views and CTEs for faster queries.
+**Page 1: Intro Page**
 
-Example:
-
-```sql
-WITH monthly_summary AS (
-  SELECT
-    disco,
-    DATE_TRUNC('month', billing_date) AS month,
-    SUM(energy_kwh) AS total_energy,
-    SUM(billing_naira) AS total_billed,
-    SUM(collection_naira) AS total_collected
-  FROM master_energy_analysis
-  GROUP BY disco, DATE_TRUNC('month', billing_date)
-)
-SELECT * FROM monthly_summary;
-```
-
----
-
-## 📈 Power BI Dashboard Structure
-
-**Page 1: Executive Summary**
+**Page 2: Executive Summary**
 
 * KPI Cards: Total Billing, Collection, Collection Efficiency
-* Bar chart: DisCo-wise billing vs collection
-* Pie: Revenue by Band
+* Bar chart: DisCo-wise energy distribution and billing 
 
-**Page 2: Trends**
+**Page 3: Executive Summary 2**
 
-* Line chart: Billing vs Collection over time
+* Bar chart: DisCo-wise revenue collection
+* Doughnut: Revenue by Band
 * Slicer: Band, DisCo, Date
 
-**Page 3: Band-Level Analysis**
+**Page 4: Trends and Time Series**
 
-* Heatmap: Collection Efficiency by Band & Month
+* Line chart: Billing vs Collection over time
+* Table: Billing, Collection and Collection Efficiency over time
+
+**Page 5: Revenue Leakage**
+
+* Area chart: Revenue leakage by Disco
+* Table: Revenue Leakage by Disco and Band
+
+**Page 6: Band Performance**
 * Column chart: Avg ₦/kWh per Band
-
-**Page 4: Revenue Leakage Drill-down**
-
-* Tree map: Losses by DisCo
-
+* Line Chart: Collection Efficiency by Band
 ---
 
 ## 🌍 Benchmarking: Nigeria vs Global Standards
@@ -254,9 +170,7 @@ Data Analyst | Finance Analytics | Power Sector Strategy
 > For questions or collaborations, please reach out via [duruekefranklin@gmail.com](mailto:duruekefranklin@gmail.com)
 
 ---
-### Attribution & Logo
-
-<p align="left">
+<p align="center">
   <img src="nerc-logo1.png" alt="NERC Logo" width="120"/>
 </p>
 
