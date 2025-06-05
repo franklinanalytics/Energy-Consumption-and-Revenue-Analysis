@@ -114,7 +114,7 @@ FROM master_energy_analysis
 GROUP BY band
 ORDER BY total_billed DESC;
 
--- Summary Tables ans CTEs
+-- Summary Tables and CTEs
 WITH monthly_summary AS (
   SELECT
     disco,
