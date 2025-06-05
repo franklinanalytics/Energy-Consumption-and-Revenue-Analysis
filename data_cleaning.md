@@ -1,6 +1,4 @@
-# Energy-Consumption-and-Revenue-Analysis
-
-## Data Cleaning & Transformation Process
+# Data Cleaning & Transformation Process
 
 **Tool Used:**
 
