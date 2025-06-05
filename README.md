@@ -271,5 +271,13 @@ Data Analyst | Finance | Power Sector Strategy
 > For questions or collaborations, please reach out via [duruekefranklin@gmail.com](mailto:duruekefranklin@gmail.com)
 
 ---
+### 📎 Attribution & Logo
 
+<p align="left">
+  <img src="images/nerc-logo1.png" alt="NERC Logo" width="120"/>
+</p>
+
+**Logo credit**: Nigerian Electricity Regulatory Commission — used for educational and non-commercial purposes only.
+
+---
 > **Status:** ✅ Completed — Ready for Interview Use, GitHub Portfolio, and Upwork Showcase
