@@ -116,7 +116,7 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 
 ## Power BI Dashboard Structure
 
-**Page 1: [Intro Page](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/assets/page1.png)**
+**Page 1: Intro Page**
 
 **Page 2: Executive Summary**
 
