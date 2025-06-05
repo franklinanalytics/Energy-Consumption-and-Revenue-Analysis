@@ -1,4 +1,4 @@
-# Executive Power Sector Insights Report (2020–2022)
+## Executive Power Sector Location Advisory Report for AI Robotics Company
 
 ## 📌 Project Context
 
@@ -48,7 +48,7 @@ Based on collection efficiency and loss patterns, Ikeja Electric (IE) and Eko El
 
 ---
 
-## 🏙️ Recommended City: Lagos (Ikeja Industrial Zone)
+### 🏙️ Recommended City: Lagos (Ikeja Industrial Zone)
 
 - Band A zones with 20–24 hrs/day power
 - Close to ports, airports, expressways
@@ -132,7 +132,7 @@ Nigeria is ripe for industrial AI innovation—but power supply must be guarante
 
 ## 📬 Author
 
-**Durueke Franklin Obinna**  
+**Franklin Obinna Durueke**  
 Power & Data Analytics Consultant  
 📍 Abuja, Nigeria  
 📞 +2347067053036  
