@@ -1,4 +1,4 @@
-![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/assets/page1.png)
+![](images/page1.png)
 
 ## Project Overview
 
