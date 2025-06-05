@@ -1,5 +1,5 @@
 # 🇳🇬 Nigerian Power Sector Analysis (2020–2022)
-[](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/assets/page1.png)
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/assets/page1.png)
 ## Project Overview
 
 This project delivers a comprehensive financial and operational analysis of electricity distribution, billing, and revenue collection in Nigeria from 2020 to 2022, based on official datasets sourced from the Nigerian Electricity Regulatory Commission (NERC). It focuses on key metrics such as billing efficiency, revenue collection, band-level performance, and revenue leakage across DisCos (Distribution Companies).
