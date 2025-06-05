@@ -2,9 +2,21 @@
 
 ## Project Overview
 
-This project delivers a comprehensive financial and operational analysis of Nigeria’s power distribution sector using real-world data from 2020 to 2022. It focuses on key metrics such as billing efficiency, revenue collection, band-level performance, and revenue leakage across DisCos (Distribution Companies).
+This project delivers a comprehensive financial and operational analysis of electricity distribution, billing, and revenue collection in Nigeria from 2020 to 2022, based on official datasets sourced from the Nigerian Electricity Regulatory Commission (NERC). It focuses on key metrics such as billing efficiency, revenue collection, band-level performance, and revenue leakage across DisCos (Distribution Companies).
 
-The goal is to simulate the work of a **senior financial analyst or energy consultant**, extract insights, and provide policy- and investment-grade recommendations. The entire analysis is built using **PostgreSQL** and **Power BI**, and it aims to reflect both local relevance and global standards.
+NERC, the primary regulator of the Nigerian electricity supply industry, publishes monthly service-level performance data across Nigeria’s 11 electricity Distribution Companies (DisCos) and customer service bands. These reports formed the basis for this analytical deep-dive.
+
+The goal of this project is to:
+
+* Uncover inefficiencies in billing and collection across customer bands (A to E)
+
+* Measure and visualize revenue losses and collection performance
+
+* Highlight regional disparities and customer group behaviors
+
+* Compare Nigeria’s sector performance to international benchmarks (India, Kenya, South Africa)
+
+Built using PostgreSQL and Power BI, the analysis offers insights for stakeholders, policymakers, consultants, and industry practitioners. The findings can be used to support data-driven reforms in Nigeria’s power sector.
 
 ---
 
@@ -19,8 +31,10 @@ The goal is to simulate the work of a **senior financial analyst or energy consu
 
 ## Data Cleaning Process
 
-**Raw File:** [DisCos Energy Sales by Service Bands Reports](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/DisCos%20Energy%20Sales%20by%20Service%20Bands%20Reports_Nov.20-Sep.2022_30122022.xlsx) (Excel)
+**Raw File:** [DisCos Energy Sales by Service Bands Reports](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/DisCos%20Energy%20Sales%20by%20Service%20Bands%20Reports_Nov.20-Sep.2022_30122022.xlsx) (Excel) 
 
+**Source:** Public datasets from [NERC.gov.ng](NERC.gov.ng)
+> *This is an independent project and not affiliated with NERC. All rights and credit go to the Nigerian Electricity Regulatory Commission for the original data.*
 ---
 ### Step 1: Import and Initial Preparation
 
@@ -126,19 +140,21 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 **Query:** Billing (₦) / Energy (kWh) per DisCo and Band
 **Insight:**
 
-* Band A: ₦50–₦60/kWh
-* Band E: Below ₦20/kWh
+* Band A: ₦50–₦70/kWh
+* Band E: Below ₦30/kWh
 * Inconsistencies hint at tariff misalignment.
-  **Recommendation:** Regulatory harmonization and audit.
+
+**Recommendation:** Regulatory harmonization and audit.
 
 ### 2. Collection Efficiency by Band
 
 **Query:** Collection / Billing per Band & DisCo
 **Insight:**
 
-* Bands A–B: > 85% efficiency
+* Bands A–B: > 85% efficiency, Unless in DisCos like KE and JEDC
 * Bands D–E: Often < 50%
-  **Recommendation:** Metering and credit enforcement for low-income bands.
+
+**Recommendation:** Metering and credit enforcement for low-income bands.
 
 ### 3. Revenue Leakage by DisCo
 
