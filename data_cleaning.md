@@ -1,6 +1,6 @@
 # Energy-Consumption-and-Revenue-Analysis
 
-## 🧽 Data Cleaning & Transformation Process
+## Data Cleaning & Transformation Process
 
 **Tool Used:**
 
@@ -8,7 +8,7 @@
 
 ---
 
-### 📜 Step 1: Import and Initial Preparation
+### Step 1: Import and Initial Preparation
 
 The raw data was provided in a multi-sheet Excel workbook containing electricity billing records by distribution company (DisCo), time period, and customer band.
 
@@ -18,7 +18,7 @@ The raw data was provided in a multi-sheet Excel workbook containing electricity
 
 ---
 
-### 💃 Step 2: Subtotal Extraction by Band
+### Step 2: Subtotal Extraction by Band
 
 The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, *Band A MD*, etc.). However, the goal was to analyze **total performance per band**, not subcategories.
 
@@ -35,7 +35,7 @@ The dataset contained multiple breakdowns for each band (e.g., *Band A Non MD*, 
 
 ---
 
-### 📁 Step 3: Standardization and Structure
+### Step 3: Standardization and Structure
 
 Created a consistent table structure for each dataset (`energy`, `billing`, and `collection`), using the format:
 
@@ -45,7 +45,7 @@ Column names were normalized to lowercase and in `snake_case` format for compati
 
 ---
 
-### 🔁 Step 4: Unpivoting into Long Format
+### Step 4: Unpivoting into Long Format
 
 To enable time-series and band-level comparison:
 
@@ -62,7 +62,7 @@ Final structure per file:
 
 ---
 
-### 📦 Step 5: Export for SQL Modeling
+### Step 5: Export for SQL Modeling
 
 Each of the transformed datasets (`energy`, `billing`, and `collection`) was:
 
@@ -72,7 +72,7 @@ Each of the transformed datasets (`energy`, `billing`, and `collection`) was:
 
 ---
 
-## ✅ Summary
+## Summary
 
 This systematic approach to cleaning and reshaping the energy distribution data lays the foundation for high-quality analysis. It ensures compatibility with:
 
