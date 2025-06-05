@@ -237,7 +237,7 @@ SELECT * FROM monthly_summary;
 | Electrification Rate          | \~55%    | 75%   | 99%   | 85%          |
 | Technical + Commercial Losses | 30–40%   | 22%   | 18%   | 10–15%       |
 
-> 📌 *Source: IEA, World Bank Open Data*
+> *Source: IEA, World Bank Open Data*
 
 **Conclusion:** Nigeria’s inefficiencies are more structural than demand-driven. Financial analytics can unlock powerful policy reform, debt recovery, and tariff accuracy if applied with real-time data and regulatory backing.
 
@@ -246,38 +246,18 @@ SELECT * FROM monthly_summary;
 ## 👨🏽‍💼 Author
 
 **Franklin Durueke**
-Data Analyst | Finance | Power Sector Strategy
+
+Data Analyst | Finance Analytics | Power Sector Strategy
+
 [GitHub](https://github.com/franklinanalytics) · [LinkedIn](https://linkedin.com/in/durueke-franklin)
-
----
-
-## 📂 File Structure
-
-```
-├── data/
-│   ├── energy_dist.csv
-│   ├── billing.csv
-│   └── collection.csv
-├── sql/
-│   ├── create_view.sql
-│   ├── band_efficiency.sql
-│   └── revenue_loss_by_disco.sql
-├── visuals/
-│   └── power_bi_dashboard.pbix
-├── README.md
-└── insights.md
-```
 
 > For questions or collaborations, please reach out via [duruekefranklin@gmail.com](mailto:duruekefranklin@gmail.com)
 
 ---
-### 📎 Attribution & Logo
+### Attribution & Logo
 
 <p align="left">
-  <img src="images/nerc-logo1.png" alt="NERC Logo" width="120"/>
+  <img src="nerc-logo1.png" alt="NERC Logo" width="120"/>
 </p>
 
-**Logo credit**: Nigerian Electricity Regulatory Commission — used for educational and non-commercial purposes only.
-
----
-> **Status:** ✅ Completed — Ready for Interview Use, GitHub Portfolio, and Upwork Showcase
+> **Logo credit**: [NERC](NERC.gov.ng) — for educational and non-commercial purposes only.
