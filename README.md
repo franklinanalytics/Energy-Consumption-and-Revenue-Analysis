@@ -65,6 +65,7 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 ## Analysis & Insights
 
 ### 1. Energy Billing Rate by Band
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/billing_rate_by_band.png)
 
 **Insight:**
 
