@@ -66,51 +66,50 @@ Loaded into PostgreSQL and created a **master view** joining all datasets by `di
 
 ### 1. Energy Billing Rate by Band
 
-**Query:** Billing (₦) / Energy (kWh) per DisCo and Band
 **Insight:**
 
-* Band A: ₦50–₦70/kWh
-* Band E: Below ₦30/kWh
-* Inconsistencies hint at tariff misalignment.
+Across most DisCos, Band A customers are billed between ₦50–₦70 per kWh, reflecting Nigeria’s target for premium service users. In contrast, Band E customers average below ₦30/kWh, aligning with the subsidized low-income lifeline structure.
 
-**Recommendation:** Regulatory harmonization and audit.
+However, inconsistencies were observed: in some DisCos, Band C or D billing overlaps with Band B, suggesting potential tariff misalignment or data quality issues.
+
+
+**Recommendation:** Review and standardize tariff bands to ensure equitable billing and regulatory compliance.
 
 ### 2. Collection Efficiency by Band
 
-**Query:** Collection / Billing per Band & DisCo
 **Insight:**
 
-* Bands A–B: > 85% efficiency, Unless in DisCos like KE and JEDC
-* Bands D–E: Often < 50%
+While Bands A and B show collection rates above 85%, Band E and Lifeline segments often fall below 50%, especially in areas like Benin and Yola. This reveals the financial pressure of servicing lower-income groups without corresponding recovery.
 
-**Recommendation:** Metering and credit enforcement for low-income bands.
+**Recommendation:** Implement targeted subsidy audits, prepaid meters, or enforce stricter credit enforcement mechanisms to reduce non-recoverable bills especially in low-income bands.
 
 ### 3. Revenue Leakage by DisCo
 
-**Query:** Billing - Collection per DisCo
 **Insight:**
 
-* High losses in Kaduna, Ibadan, and Benin.
+Revenue leakage is highest in DisCos with low metering coverage and political exposure. For example, DisCos like Kaduna and Ibadan show up to ₦2–4 billion in annual revenue gaps, primarily due to poor collection from Band C–E.
 
-**Recommendation:** Target metering rollout and enforcement.
+**Recommendation:** Focus national metering rollout, technical loss audits and credit enforcement mechanisms in high-loss zones.
 
 ### 4. Monthly Trends
 
-**Query:** Aggregated billing/collection by month
 **Insight:**
 
-* Billing up, collection flat post-2021.
+Billing values show upward trends year-on-year, but collection growth lags behind, especially after Q1 2021. This reflects Nigeria’s post-subsidy strain on end-users and inflation-induced debt accumulation.
 
-**Recommendation:** Prepaid incentives and financing for debt reduction.
+Seasonality Observed: Mid-year performance tends to be better; year-end dips may link to festive load or enforcement fatigue.
 
-### 5. Band Efficiency (Energy vs Paid)
+Cashflow Volatility: A ~9% swing in monthly efficiency indicates uncertainty in returns, needing stronger collection systems.
 
-**Query:** Collection / Energy per Band
+**Recommendation:** Prepaid incentives and financing for debt reduction. 
+
+### 5. Band Efficiency: Delivered vs Paid
+
 **Insight:**
 
-* Bands D–E: < 40% monetized energy
+Even when energy is delivered (kWh), Bands D and E pay only a fraction of it. In some months, less than 40% of delivered energy translates to revenue for these segments.
 
-**Recommendation:** Improve mobile payments and education.
+**Recommendation:** Prioritize metering, mprove mobile payments and education.
 
 ---
 
