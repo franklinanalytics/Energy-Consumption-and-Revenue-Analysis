@@ -171,7 +171,7 @@ Data Analyst | Finance Analytics | Power Sector Strategy
 
 ---
 <p align="center">
-  <img src="nerc-logo1.png" alt="NERC Logo" width="120"/>
+  <img src="nerc-logo.png" alt="NERC Logo" width="120"/>
 </p>
 
 > **Logo credit**: [NERC](NERC.gov.ng) — for educational and non-commercial purposes only.
