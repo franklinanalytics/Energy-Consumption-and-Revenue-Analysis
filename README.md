@@ -131,9 +131,16 @@ While Bands A and B show collection rates above 85%, Band E and Lifeline segment
 **Insight:**
 
 Top DisCos by Energy Distributed:
-Ikeja Electric (IE) – Leading in energy distributed and Highest total collection.
 
-EKEDC (Eko), AEDC (Abuja), and IBEDC (Ibadan) followed.
+Ikeja Electric (IE) – Leads in energy distributed and highest total collection. This is ideal for housing and manufacturing
+
+followed by 
+
+EKEDC (Eko) - Strong industrial base in Lagos Island,
+
+AEDC (Abuja) - Strategic location with government proximity,
+
+and IBEDC (Ibadan).
 
 **Recommendation:** Increased electricity distribution and collection methods will improve revenue among DisCos
 
