@@ -20,7 +20,7 @@ Built using PostgreSQL and Power BI, the analysis offers insights for stakeholde
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 * **Excel / Power Query** — Data cleaning and wrangling
 * **PostgreSQL** — Data transformation and querying
@@ -119,12 +119,35 @@ While Bands A and B show collection rates above 85%, Band E and Lifeline segment
 
 **Recommendation:** Implement targeted subsidy audits, prepaid meters, or enforce stricter credit enforcement mechanisms to reduce non-recoverable bills especially in low-income bands.
 
-### 3. Disco Efficiency: Distribution vs Revenue
-![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/energy_dist_by_band.png)
+### 3. Disco Efficiency: Distribution & Revenue
+**Distribution Efficiency**
+
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/electricity_across_disco.png)
+
+**Revenue**
+
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/revenue_by_disco.png)
 
 **Insight:**
 
-Even when energy is delivered (kWh), Bands D and E pay only a fraction of it. In some months, less than 40% of delivered energy translates to revenue for these segments.
+Top DisCos by Energy Distributed:
+Ikeja Electric (IE) – Leading in energy distributed.
+
+EKEDC (Eko), IBEDC (Ibadan), and AEDC (Abuja) also reported strong energy throughput.
+
+Top DisCos by Collection (₦):
+Ikeja Electric (IE) – Highest total collection.
+
+EKEDC, AEDC, and IBEDC followed.
+
+Worst Performing DisCos by Revenue Loss:
+Kaduna Electric (KE): ₦104.16 billion loss
+
+BEDC: ₦95.97 billion loss
+
+IBEDC: ₦94.38 billion loss
+
+These three alone represent over 45% of national revenue leakages.
 
 **Recommendation:** Prioritize metering, mprove mobile payments and education.
 
@@ -135,7 +158,35 @@ Even when energy is delivered (kWh), Bands D and E pay only a fraction of it. In
 
 Revenue leakage is highest in DisCos with low metering coverage and political exposure. For example, DisCos like Kaduna and Ibadan show up to ₦2–4 billion in annual revenue gaps, primarily due to poor collection from Band C–E.
 
-**Recommendation:** Focus national metering rollout, technical loss audits and credit enforcement mechanisms in high-loss zones.
+**Recommendation:**   
+Choose **Ikeja Electric (IE)** or **Eko Electric (EKEDC)** for reliable Band A power and industrial access.
+
+---
+
+## 🏙️ Recommended City: Lagos (Ikeja Industrial Zone)
+
+- Band A zones with 20–24 hrs/day power
+- Close to ports, airports, expressways
+- Existing heavy industry and logistics network
+- Independent Power Producers (IPPs) in the area
+
+### Alternative: Abuja (AEDC - Band A)
+
+- Government support
+- Less congestion
+- Good infrastructure in select zones
+
+> **Only Band A zones** are suitable for energy-intensive industries.
+
+## ✅ Final Recommendation
+
+1. **Establish operations in Ikeja (Lagos) under Ikeja Electric**
+2. Secure **Band A power** access or install a hybrid captive plant
+3. **Use AI & robotics** to expand into power sector transformation (smart grids, battery storage)
+4. Collaborate with government to drive **energy innovation and reform**
+
+
+---
 
 ### 5. Monthly & Yearly Trends
 <table>
@@ -157,7 +208,7 @@ Cashflow Volatility: A ~9% swing in monthly efficiency indicates uncertainty in 
 
 ---
 
-## 🌍 Benchmarking: Nigeria vs Global Standards
+## Benchmarking: Nigeria vs Global Standards
 
 | Metric                        | Nigeria  | Kenya | India | South Africa |
 | ----------------------------- | -------- | ----- | ----- | ------------ |
