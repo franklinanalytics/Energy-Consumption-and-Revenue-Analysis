@@ -131,16 +131,19 @@ While Bands A and B show collection rates above 85%, Band E and Lifeline segment
 **Insight:**
 
 Top DisCos by Energy Distributed:
-Ikeja Electric (IE) – Leading in energy distributed.
+Ikeja Electric (IE) – Leading in energy distributed and Highest total collection.
 
-EKEDC (Eko), IBEDC (Ibadan), and AEDC (Abuja) also reported strong energy throughput.
+EKEDC (Eko), AEDC (Abuja), and IBEDC (Ibadan) followed.
 
-Top DisCos by Collection (₦):
-Ikeja Electric (IE) – Highest total collection.
+**Recommendation:** Increased electricity distribution and collection methods will improve revenue among DisCos
 
-EKEDC, AEDC, and IBEDC followed.
+### 4. Revenue Leakage by DisCo
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/revenue_leakage_by_disco.png)
 
-Worst Performing DisCos by Revenue Loss:
+**Insight:**
+
+Revenue leakage is highest in DisCos with low metering coverage and political exposure. 
+
 Kaduna Electric (KE): ₦104.16 billion loss
 
 BEDC: ₦95.97 billion loss
@@ -149,42 +152,8 @@ IBEDC: ₦94.38 billion loss
 
 These three alone represent over 45% of national revenue leakages.
 
-**Recommendation:** Prioritize metering, mprove mobile payments and education.
-
-### 4. Revenue Leakage by DisCo
-![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/revenue_leakage_by_disco.png)
-
-**Insight:**
-
-Revenue leakage is highest in DisCos with low metering coverage and political exposure. For example, DisCos like Kaduna and Ibadan show up to ₦2–4 billion in annual revenue gaps, primarily due to poor collection from Band C–E.
-
 **Recommendation:**   
-Choose **Ikeja Electric (IE)** or **Eko Electric (EKEDC)** for reliable Band A power and industrial access.
-
----
-
-## 🏙️ Recommended City: Lagos (Ikeja Industrial Zone)
-
-- Band A zones with 20–24 hrs/day power
-- Close to ports, airports, expressways
-- Existing heavy industry and logistics network
-- Independent Power Producers (IPPs) in the area
-
-### Alternative: Abuja (AEDC - Band A)
-
-- Government support
-- Less congestion
-- Good infrastructure in select zones
-
-> **Only Band A zones** are suitable for energy-intensive industries.
-
-## ✅ Final Recommendation
-
-1. **Establish operations in Ikeja (Lagos) under Ikeja Electric**
-2. Secure **Band A power** access or install a hybrid captive plant
-3. **Use AI & robotics** to expand into power sector transformation (smart grids, battery storage)
-4. Collaborate with government to drive **energy innovation and reform**
-
+Prioritize metering, improve mobile payments and education.
 
 ---
 
@@ -222,13 +191,11 @@ Cashflow Volatility: A ~9% swing in monthly efficiency indicates uncertainty in 
 
 ## Conclusion:
 
-Nigeria’s power sector is undergoing a major transformation. While challenges persist—particularly in collection inefficiencies, revenue leakage, and infrastructure shortfalls—the data clearly shows zones of high potential for strategic, technology-driven investments.
-
-With over ₦659 billion in leakage and a 30% average shortfall in collections, there is ample room for commercial investment, especially in DisCos with high energy throughput and recoverable losses.
+Nigeria’s power sector is undergoing a major transformation. While challenges persist—particularly in collection inefficiencies, revenue leakage, and infrastructure shortfalls—the data clearly shows that there is potential and ample room for commercial, technology-driven investments, especially in DisCos with high energy throughput and recoverable loses.
 
 ---
 
-## 👨🏽‍💼 Author
+## Author
 
 **Franklin Durueke**
 
