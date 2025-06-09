@@ -79,12 +79,8 @@ However, inconsistencies were observed: in some DisCos, Band C or D billing over
 ### 2. Collection Efficiency by Band
 <table>
   <tr>
-    <td><img src="" width="300"></td>
-    <td><img src="" width="300"></td>
-  </tr>
-  <tr>
-    <td align="center">Customer Table</td>
-    <td align="center">Transaction Table</td>
+    <td><img src="images/collection_efficiency.png" width="400"></td>
+    <td><img src="images/collection_efficiency2.png" width="400"></td>
   </tr>
 </table>
 
@@ -95,6 +91,7 @@ While Bands A and B show collection rates above 85%, Band E and Lifeline segment
 **Recommendation:** Implement targeted subsidy audits, prepaid meters, or enforce stricter credit enforcement mechanisms to reduce non-recoverable bills especially in low-income bands.
 
 ### 3. Revenue Leakage by DisCo
+![](https://github.com/franklinanalytics/Energy-Consumption-and-Revenue-Analysis/blob/main/images/revenue_leakage_by_disco.png)
 
 **Insight:**
 
@@ -164,8 +161,13 @@ Even when energy is delivered (kWh), Bands D and E pay only a fraction of it. In
 | Technical + Commercial Losses | 30–40%   | 22%   | 18%   | 10–15%       |
 
 > *Source: IEA, World Bank Open Data*
+---
 
-**Conclusion:** Nigeria’s inefficiencies are more structural than demand-driven. Financial analytics can unlock powerful policy reform, debt recovery, and tariff accuracy if applied with real-time data and regulatory backing.
+## Conclusion:
+
+Nigeria’s power sector is undergoing a major transformation. While challenges persist—particularly in collection inefficiencies, revenue leakage, and infrastructure shortfalls—the data clearly shows zones of high potential for strategic, technology-driven investments.
+
+With over ₦659 billion in leakage and a 30% average shortfall in collections, there is ample room for commercial investment, especially in DisCos with high energy throughput and recoverable losses.
 
 ---
 
