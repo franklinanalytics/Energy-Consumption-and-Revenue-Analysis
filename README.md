@@ -77,6 +77,16 @@ However, inconsistencies were observed: in some DisCos, Band C or D billing over
 **Recommendation:** Review and standardize tariff bands to ensure equitable billing and regulatory compliance.
 
 ### 2. Collection Efficiency by Band
+<table>
+  <tr>
+    <td><img src="" width="300"></td>
+    <td><img src="" width="300"></td>
+  </tr>
+  <tr>
+    <td align="center">Customer Table</td>
+    <td align="center">Transaction Table</td>
+  </tr>
+</table>
 
 **Insight:**
 
